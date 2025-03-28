@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,7 @@
 </head>
 <body>
   <header>
-    <h1>GODCOIN</h1>
+    <h1>welcome to GODCOIN</h1>
     <p>The Faith-Based Utility Token Built on Solana</p>
   </header>
 
@@ -152,5 +153,14 @@
 <button id="installButton" onclick="installApp()" style="display:none; margin: 20px auto; padding: 10px 20px; font-size: 16px;">
   Install GODCOIN App
 </button>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.SplashScreen) {
+        window.Capacitor.Plugins.SplashScreen.hide();
+      }
+    });
+  </script>
 </body>
-</html>c
+</html>
+
