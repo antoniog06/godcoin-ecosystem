@@ -83,9 +83,24 @@
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 GODCOIN. All rights reserved.</p>
-  </footer>
+<footer class="footer">
+  <h3>Join the GODCOIN Community</h3>
+  <p>Stay connected and help us build a faith-powered future.</p>
+
+  <div class="social-icons">
+    <a href="https://t.me/GODCOINOfficial" target="_blank" aria-label="Telegram">Telegram</a>
+    <a href="https://discord.gg/GODCOIN" target="_blank" aria-label="Discord">Discord</a>
+    <a href="https://youtube.com/@GODCOINOfficial" target="_blank" aria-label="YouTube">YouTube</a>
+    <a href="https://tiktok.com/@GODCOINOfficial" target="_blank" aria-label="TikTok">TikTok</a>
+    <a href="https://twitter.com/GODCOINOfiicial" target="_blank" aria-label="Twitter">X (Twitter)</a>
+  </div>
+
+  <button id="installButton" onclick="installApp()" class="install-btn">
+    Install GODCOIN App
+  </button>
+
+  <p>© 2025 GODCOIN. All rights reserved.</p>
+</footer>
 
   <script>
     async function connectWallet() {
@@ -109,5 +124,29 @@
       .catch(err => console.error('Service worker registration failed:', err));
   }
 </script>
+<script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.getElementById('installButton').style.display = 'block';
+  });
+
+  function installApp() {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        }
+        deferredPrompt = null;
+      });
+    }
+  }
+</script>
+<button id="installButton" onclick="installApp()" style="display:none; margin: 20px auto; padding: 10px 20px; font-size: 16px;">
+  Install GODCOIN App
+</button>
 </body>
-</html>
+</html>c
