@@ -8,9 +8,16 @@
   <meta property="og:description" content="Explore GODCOIN, a faith-based token on Solana with utility and community focus." />
   <meta property="og:image" content="https://gateway.pinata.cloud/ipfs/bafybeigwtdhhfmj2gn5qgdnpl4csccqyihtw3ryi3glw6rwrlmzdvkfwc4" />
   <meta property="og:url" content="https://antoniog06.github.io/godcoin/" /> <!-- Update with your URL -->
-  <title>GODCOIN - Ofiicial Site</title>
+
+  <title>GODCOIN - Official Site</title>
+
+  <!-- Icons and Styles -->
   <link rel="icon" href="https://gateway.pinata.cloud/ipfs/bafybeigwtdhhfmj2gn5qgdnpl4csccqyihtw3ryi3glw6rwrlmzdvkfwc4" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- PWA Support -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f0f0f">
 </head>
 <body>
   <header>
@@ -95,5 +102,12 @@
       }
     }
   </script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('Service worker registered.'))
+      .catch(err => console.error('Service worker registration failed:', err));
+  }
+</script>
 </body>
 </html>
