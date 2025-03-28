@@ -1,0 +1,10 @@
+{
+  "appId": "com.godcoin.app",
+  "appName": "GODCOIN",
+  "webDir": "web",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
