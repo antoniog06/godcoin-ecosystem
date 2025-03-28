@@ -190,4 +190,30 @@ footer p {
   margin-top: 20px;
   color: #aaa;
 }
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .token-info ul li, .links ul li {
+    font-size: 0.95rem;
+  }
+
+  iframe {
+    height: 300px;
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+  }
+
+  footer a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  #installButton {
+    width: 90%;
+    font-size: 1rem;
+  }
 }
