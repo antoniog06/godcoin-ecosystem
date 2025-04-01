@@ -68,7 +68,9 @@
 
     <section class="wallet-section">
       <h2>Connect Wallet</h2>
-      <button class="wallet-button" onclick="connectWallet()" aria-label="Connect to Phantom Wallet">Connect Phantom Wallet</button>
+      <button class="wallet-button" onclick="connectPhantomMobile()" aria-label="Connect to Phantom Wallet">
+  Connect Phantom Wallet
+</button>
       <noscript><p>Please enable JavaScript to connect your wallet.</p></noscript>
     </section>
 
@@ -87,6 +89,20 @@
       </ul>
     </section>
   </main>
+   
+    <section class="chart-embed">
+  <h2>Track GODCOIN Price</h2>
+  <iframe src="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU?embed=1"
+          width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"
+          title="GODCOIN Live Price Chart on GeckoTerminal">
+  </iframe>
+        
+  <!-- Text Link -->
+  <p style="text-align: center; margin-top: 10px;">
+    <a href="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU" target="_blank">
+      View GODCOIN Live Chart on GeckoTerminal
+    </a>   
+  </p>
 
 <footer class="footer">
   <h3>Join the GODCOIN Community</h3>
@@ -103,7 +119,8 @@
   <button id="installButton" onclick="installApp()" class="install-btn">
     Install GODCOIN App
   </button>
-
+   
+    <p>Contact: < href="mailto:godcoinofficial@gmail.com">godcoinofficial@gmail.com</a></p>
   <p>© 2025 GODCOIN. All rights reserved.</p>
 </footer>
 
@@ -161,6 +178,18 @@
       }
     });
   </script>
+
+<script>
+function connectPhantomMobile() {
+  const appUrl = encodeURIComponent(window.location.href);
+  const phantomDeepLink = `https://phantom.app/ul/v1/connect?app_url=${appUrl}&redirect_link=${appUrl}`;
+
+  window.location.href = phantomDeepLink;
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
 
