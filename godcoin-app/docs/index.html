@@ -109,6 +109,15 @@
       <a class="twitter-timeline" data-theme="dark" data-height="400" href="https://twitter.com/GODCOINOfiicial?ref_src=twsrc%5Etfw">Tweets by GODCOINOfiicial</a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </section>
+<div class="language-switcher" style="text-align: center; margin: 30px 0;">
+  <label for="languageSelect" style="font-weight: bold;">Choose Language:</label>
+  <select id="languageSelect" onchange="changeLanguage()" style="padding: 8px 16px; border-radius: 8px; font-size: 16px;">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="pt">Português</option>
+  </select>
+</div>
   </main>
 
   <footer class="footer" style="padding: 40px; text-align: center;">
@@ -155,5 +164,11 @@
       deferredPrompt = e;
     });
   </script>
+<script>
+function changeLanguage() {
+  const lang = document.getElementById("languageSelect").value;
+  alert(`Language switched to: ${lang}\n(Note: full translation will be added soon!)`);
+}
+</script>
 </body>
 </html>
