@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +25,47 @@
 </head>
 <body>
   <header>
-    <h1>welcome to GODCOIN</h1>
+    <h1>Welcome to GODCOIN</h1>
     <p>The Faith-Based Utility Token Built on Solana</p>
   </header>
 
   <main>
+    <!-- BIRDEYE CHART SECTION (NEW) -->
+    <section class="birdeye-chart" style="padding: 40px; text-align: center;">
+      <h2>GODCOIN Price Chart (Birdeye)</h2>
+      <iframe
+        src="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana"
+        width="100%"
+        height="600"
+        frameborder="0"
+        style="max-width: 800px; border-radius: 12px; border: none; margin: 0 auto; display: block;">
+      </iframe>
+      <p style="margin-top: 10px;">
+        <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">
+          View Full Chart on Birdeye
+        </a>
+      </p>
+    </section>
+
+    <!-- BUY BUTTON AND SWAP SECTION (NEW) -->
+    <section class="buy-section" style="padding: 40px; text-align: center;">
+      <h2>Buy GODCOIN</h2>
+      <p>Connect your wallet and purchase GODCOIN directly below:</p>
+      <!-- BUY BUTTON -->
+      <button class="buy-button" onclick="connectPhantomMobile()" style="background: linear-gradient(90deg, #2ecc71, #27ae60); padding: 14px 32px; border: none; border-radius: 8px; color: white; font-size: 18px; font-weight: bold; cursor: pointer; margin: 20px 0;">
+        Connect Wallet to Buy GODCOIN
+      </button>
+      <div id="swap-widget" style="max-width: 600px; margin: 0 auto;">
+        <iframe
+          src="https://jup.ag/swap/SOL-HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm"
+          width="100%"
+          height="600"
+          frameborder="0"
+          style="border-radius: 12px; border: none;">
+        </iframe>
+      </div>
+    </section>
+
     <section class="token-info">
       <h2>Token Information</h2>
       <ul>
@@ -43,89 +78,30 @@
     </section>
 
     <section class="chart-embed">
-  <h2>Track GODCOIN Price</h2>
-  <iframe src="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU?embed=1"
-          width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"
-          title="GODCOIN Live Price Chart on GeckoTerminal">
-  </iframe>
+      <h2>Track GODCOIN Price (GeckoTerminal)</h2>
+      <iframe src="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU?embed=1"
+              width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"
+              title="GODCOIN Live Price Chart on GeckoTerminal">
+      </iframe>
+      <p style="text-align: center; margin-top: 10px;">
+        <a href="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU" target="_blank">
+          View GODCOIN Live Chart on GeckoTerminal
+        </a>
+      </p>
+    </section>
 
-  <!-- Text Link -->
-  <p style="text-align: center; margin-top: 10px;">
-    <a href="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU" target="_blank">
-      View GODCOIN Live Chart on GeckoTerminal
-    </a>
-  </p>
-
-  <!-- Banner Image Link -->
-  <div style="text-align: center; margin-top: 10px;">
-    <a href="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/GeckoTerminal_Logo_2023.svg/512px-GeckoTerminal_Logo_2023.svg.png" 
-           alt="Track GODCOIN on GeckoTerminal" 
-           style="max-width: 300px; border-radius: 12px;">
-    </a>
-  </div>
-<div style="text-align: center; margin: 40px 0;">
-  <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" 
-     target="_blank" 
-     style="background: linear-gradient(90deg, #2e8bff, #00d4ff); padding: 14px 32px; border-radius: 8px; color: white; font-size: 18px; font-weight: bold; text-decoration: none;">
-    Trade GODCOIN on Birdeye
-  </a>
-</div>
-</section>
-<section class="jupiter-swap" style="text-align: center;">
-  <h2>Swap GODCOIN Instantly</h2>
-  <iframe
-    src="https://jup.ag/swap/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm"
-    width="100%"
-    height="600"
-    frameborder="0"
-    style="max-width: 600px; border-radius: 12px; border: none;">
-  </iframe>
-</section>
-<section class="how-to-trade" style="padding: 40px; text-align: center;">
-  <h2>How to Trade GODCOIN</h2>
-
-  <p>Follow these steps to get started trading GODCOIN on Solana:</p>
-
-  <h3>1. Install a Solana Wallet</h3>
-  <p>We recommend using <strong>Phantom Wallet</strong>:</p>
-  <a href="https://phantom.app/download" target="_blank" style="display: inline-block; margin: 10px 0; background: black; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none;">
-    Download Phantom Wallet
-  </a>
-
-  <h3>2. Add SOL to Your Wallet</h3>
-  <p>Send a small amount of <strong>SOL</strong> to your wallet address to cover trading fees (Solana fees are very low).</p>
-
-  <h3>3. Swap for GODCOIN</h3>
-  <p>You can swap SOL for GODCOIN using either option below:</p>
-
-  <div style="margin: 20px 0;">
-    <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" 
-       target="_blank" 
-       style="background: linear-gradient(90deg, #2e8bff, #00d4ff); padding: 14px 32px; border-radius: 8px; color: white; font-size: 18px; font-weight: bold; text-decoration: none;">
-      Trade GODCOIN on Birdeye
-    </a>
-  </div>
-
-  <h3>Or swap instantly below:</h3>
-  <iframe
-    src="https://jup.ag/swap/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm"
-    width="100%"
-    height="600"
-    frameborder="0"
-    style="max-width: 600px; border-radius: 12px; border: none; margin: auto;">
-  </iframe>
-
-  <h3>Need Help?</h3>
-  <p>Join our community on <a href="https://t.me/GODCOINOfficial" target="_blank">Telegram</a> or <a href="https://discord.gg/GODCOIN" target="_blank">Discord</a>.</p>
-</section>
-
-    <section class="wallet-section">
-      <h2>Connect Wallet</h2>
-      <button class="wallet-button" onclick="connectPhantomMobile()" aria-label="Connect to Phantom Wallet">
-  Connect Phantom Wallet
-</button>
-      <noscript><p>Please enable JavaScript to connect your wallet.</p></noscript>
+    <section class="how-to-trade" style="padding: 40px; text-align: center;">
+      <h2>How to Trade GODCOIN</h2>
+      <p>Follow these steps to get started trading GODCOIN on Solana:</p>
+      <h3>1. Install a Solana Wallet</h3>
+      <p>We recommend using <strong>Phantom Wallet</strong>:</p>
+      <a href="https://phantom.app/download" target="_blank" style="display: inline-block; margin: 10px 0; background: black; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none;">
+        Download Phantom Wallet
+      </a>
+      <h3>2. Add SOL to Your Wallet</h3>
+      <p>Send a small amount of <strong>SOL</strong> to your wallet address to cover trading fees.</p>
+      <h3>3. Swap for GODCOIN</h3>
+      <p>Use the Buy button above or visit <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">Birdeye</a>.</p>
     </section>
 
     <section class="newsfeed">
@@ -133,141 +109,66 @@
       <a class="twitter-timeline" data-theme="dark" data-height="400" href="https://twitter.com/GODCOINOfiicial?ref_src=twsrc%5Etfw">Tweets by GODCOINOfiicial</a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </section>
-
-    <section class="links">
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://antoniog06.github.io/godcoin-token-list/solana.tokenlist.json" target="_blank" rel="noopener noreferrer">Token List JSON</a></li>
-        <li><a href="https://github.com/antoniog06/godcoin-ecosystem" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-        <li><a href="https://twitter.com/GODCOINOfiicial" target="_blank" rel="noopener noreferrer">Follow us on X</a></li>
-      </ul>
-    </section>
+<div class="language-switcher" style="text-align: center; margin: 30px 0;">
+  <label for="languageSelect" style="font-weight: bold;">Choose Language:</label>
+  <select id="languageSelect" onchange="changeLanguage()" style="padding: 8px 16px; border-radius: 8px; font-size: 16px;">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="pt">Português</option>
+  </select>
+</div>
   </main>
-   
-    <section class="chart-embed">
-  <h2>Track GODCOIN Price</h2>
-  <iframe src="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU?embed=1"
-          width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"
-          title="GODCOIN Live Price Chart on GeckoTerminal">
-  </iframe>
-        
-  <!-- Text Link -->
-  <p style="text-align: center; margin-top: 10px;">
-    <a href="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU" target="_blank">
-      View GODCOIN Live Chart on GeckoTerminal
-    </a>   
-  </p>
 
-<section class="birdeye-chart">
-  <h2>GODCOIN Chart on Birdeye</h2>
-  <iframe 
-    src="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" 
-    width="100%" 
-    height="600" 
-    frameborder="0" 
-    style="border-radius: 12px; border: none;">
-  </iframe>
-  <p style="text-align: center; margin-top: 10px;">
-    <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">
-      View GODCOIN on Birdeye
-    </a>
-  </p>
-
-
-<footer class="footer">
-  <h3>Join the GODCOIN Community</h3>
-  <p>Stay connected and help us build a faith-powered future.</p>
-
-  <div class="social-icons">
-    <a href="https://t.me/GODCOINOfficial" target="_blank" aria-label="Telegram">Telegram</a>
-    <a href="https://discord.gg/GODCOIN" target="_blank" aria-label="Discord">Discord</a>
-    <a href="https://youtube.com/@GODCOINOfficial" target="_blank" aria-label="YouTube">YouTube</a>
-    <a href="https://tiktok.com/@GODCOINOfficial" target="_blank" aria-label="TikTok">TikTok</a>
-    <a href="https://twitter.com/GODCOINOfiicial" target="_blank" aria-label="Twitter">X (Twitter)</a>
-  </div>
-<section id="mobile-guide" style="padding: 40px; text-align: center;">
-  <h2>GODCOIN Trading Guide (Mobile Friendly)</h2>
-  <p>This quick image shows how to install Phantom and swap SOL for GODCOIN step-by-step:</p>
-
-  <img src="https://antoniog06.github.io/godcoin/images/how_to_trade_godcoin_guide.png" 
-       alt="GODCOIN Mobile Trading Guide"
-       style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); margin-top: 20px;" />
-</section>
-
-  <button id="installButton" onclick="installApp()" class="install-btn">
-    Install GODCOIN App
-  </button>
-   
-    <p>Contact: < href="mailto:godcoinofficial@gmail.com">godcoinofficial@gmail.com</a></p>
-  <p>© 2025 GODCOIN. All rights reserved.</p>
-</footer>
+  <footer class="footer" style="padding: 40px; text-align: center;">
+    <h3>Join the GODCOIN Community</h3>
+    <p>Stay connected and help us build a faith-powered future.</p>
+    <div class="social-icons" style="margin: 20px 0;">
+      <a href="https://t.me/GODCOINOfficial" target="_blank" style="margin: 0 10px;">Telegram</a>
+      <a href="https://discord.gg/GODCOIN" target="_blank" style="margin: 0 10px;">Discord</a>
+      <a href="https://twitter.com/GODCOINOfiicial" target="_blank" style="margin: 0 10px;">X (Twitter)</a>
+    </div>
+    <p>Contact: <a href="mailto:godcoinofficial@gmail.com">godcoinofficial@gmail.com</a></p>
+    <p>© 2025 GODCOIN. All rights reserved.</p>
+  </footer>
 
   <script>
-    async function connectWallet() {
+    function connectPhantomMobile() {
+      const appUrl = encodeURIComponent(window.location.href);
+      const phantomDeepLink = `https://phantom.app/ul/v1/connect?app_url=${appUrl}&redirect_link=${appUrl}`;
+      
       if (window.solana && window.solana.isPhantom) {
-        try {
-          const resp = await window.solana.connect();
-          alert(`Connected: ${resp.publicKey.toString()}`);
-        } catch (err) {
-          console.error(err);
-          alert('Connection failed.');
-        }
+        window.solana.connect()
+          .then(resp => {
+            alert(`Connected: ${resp.publicKey.toString()}`);
+          })
+          .catch(err => {
+            console.error(err);
+            alert('Connection failed. Redirecting to Phantom...');
+            window.location.href = phantomDeepLink;
+          });
       } else {
-        alert('Phantom Wallet not found. Please install it.');
+        window.location.href = phantomDeepLink;
       }
     }
-  </script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('Service worker registered.'))
-      .catch(err => console.error('Service worker registration failed:', err));
-  }
-</script>
-<script>
-  let deferredPrompt;
 
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    document.getElementById('installButton').style.display = 'block';
-  });
-
-  function installApp() {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
-        }
-        deferredPrompt = null;
-      });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('Service worker registered.'))
+        .catch(err => console.error('Service worker registration failed:', err));
     }
-  }
-</script>
-<button id="installButton" onclick="installApp()" style="display:none; margin: 20px auto; padding: 10px 20px; font-size: 16px;">
-  Install GODCOIN App
-</button>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.SplashScreen) {
-        window.Capacitor.Plugins.SplashScreen.hide();
-      }
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
     });
   </script>
-
 <script>
-function connectPhantomMobile() {
-  const appUrl = encodeURIComponent(window.location.href);
-  const phantomDeepLink = `https://phantom.app/ul/v1/connect?app_url=${appUrl}&redirect_link=${appUrl}`;
-
-  window.location.href = phantomDeepLink;
+function changeLanguage() {
+  const lang = document.getElementById("languageSelect").value;
+  alert(`Language switched to: ${lang}\n(Note: full translation will be added soon!)`);
 }
 </script>
-
 </body>
 </html>
-</body>
-</html>
-
