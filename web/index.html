@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GODCOIN: The faith-based utility token built on Solana. Connect your wallet, track prices, and stay updated." />
+  <meta property="og:title" content="GODCOIN - Official Site" />
+  <meta property="og:description" content="Explore GODCOIN, a faith-based token on Solana with utility and community focus." />
+  <meta property="og:image" content="https://gateway.pinata.cloud/ipfs/bafybeigwtdhhfmj2gn5qgdnpl4csccqyihtw3ryi3glw6rwrlmzdvkfwc4" />
+  <meta property="og:url" content="https://antoniog06.github.io/godcoin/" />
+
+  <title>GODCOIN - Official Site</title>
+
+  <!-- Icons and Styles -->
+  <link rel="icon" href="https://gateway.pinata.cloud/ipfs/bafybeigwtdhhfmj2gn5qgdnpl4csccqyihtw3ryi3glw6rwrlmzdvkfwc4" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PWA Support -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f0f0f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="GODCOIN" />
+  <link rel="apple-touch-icon" href="https://gateway.pinata.cloud/ipfs/bafybeigwtdhhfmj2gn5qgdnpl4csccqyihtw3ryi3glw6rwrlmzdvkfwc4" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to GODCOIN</h1>
+    <p>The Faith-Based Utility Token Built on Solana</p>
+  </header>
+
+  <main>
+    <!-- BIRDEYE CHART SECTION (NEW) -->
+    <section class="birdeye-chart" style="padding: 40px; text-align: center;">
+      <h2>GODCOIN Price Chart (Birdeye)</h2>
+      <iframe
+        src="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana"
+        width="100%"
+        height="600"
+        frameborder="0"
+        style="max-width: 800px; border-radius: 12px; border: none; margin: 0 auto; display: block;">
+      </iframe>
+      <p style="margin-top: 10px;">
+        <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">
+          View Full Chart on Birdeye
+        </a>
+      </p>
+    </section>
+
+    <!-- BUY BUTTON AND SWAP SECTION (NEW) -->
+    <section class="buy-section" style="padding: 40px; text-align: center;">
+      <h2>Buy GODCOIN</h2>
+      <p>Connect your wallet and purchase GODCOIN directly below:</p>
+      <!-- BUY BUTTON -->
+      <button class="buy-button" onclick="connectPhantomMobile()" style="background: linear-gradient(90deg, #2ecc71, #27ae60); padding: 14px 32px; border: none; border-radius: 8px; color: white; font-size: 18px; font-weight: bold; cursor: pointer; margin: 20px 0;">
+        Connect Wallet to Buy GODCOIN
+      </button>
+      <div id="swap-widget" style="max-width: 600px; margin: 0 auto;">
+        <iframe
+          src="https://jup.ag/swap/SOL-HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm"
+          width="100%"
+          height="600"
+          frameborder="0"
+          style="border-radius: 12px; border: none;">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="token-info">
+      <h2>Token Information</h2>
+      <ul>
+        <li><strong>Symbol:</strong> GOD</li>
+        <li><strong>Name:</strong> GODCOIN</li>
+        <li><strong>Decimals:</strong> 9</li>
+        <li><strong>Mint Address:</strong> <code>HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm</code></li>
+        <li><strong>Logo:</strong> <img src="https://gateway.pinata.cloud/ipfs/bafybeigwtdhhfmj2gn5qgdnpl4csccqyihtw3ryi3glw6rwrlmzdvkfwc4" alt="GODCOIN Logo" class="logo" /></li>
+      </ul>
+    </section>
+
+    <section class="chart-embed">
+      <h2>Track GODCOIN Price (GeckoTerminal)</h2>
+      <iframe src="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU?embed=1"
+              width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"
+              title="GODCOIN Live Price Chart on GeckoTerminal">
+      </iframe>
+      <p style="text-align: center; margin-top: 10px;">
+        <a href="https://www.geckoterminal.com/solana/pools/H5SUPENGUzX2J7N9d4QvTNc9Pn2WVwawh4zuZwGVsZTU" target="_blank">
+          View GODCOIN Live Chart on GeckoTerminal
+        </a>
+      </p>
+    </section>
+
+<section class="how-to-trade" style="padding: 40px; text-align: center;">
+  <h2>How to Trade GODCOIN</h2>
+  <p>Follow these steps to get started trading GODCOIN on Solana:</p>
+  
+  <h3>1. Install a Solana Wallet</h3>
+  <p>We recommend using <strong>Phantom Wallet</strong>:</p>
+  <a href="https://phantom.app/download" target="_blank" style="display: inline-block; margin: 10px 0; background: black; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none;">
+    Download Phantom Wallet
+  </a>
+
+  <h3>2. Add SOL to Your Wallet</h3>
+  <p>Send a small amount of <strong>SOL</strong> to your wallet address to cover trading fees.</p>
+
+  <h3>3. Swap for GODCOIN</h3>
+  <p>Use the Buy button above or visit <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">Birdeye</a>.</p>
+
+  <hr style="margin: 40px auto; width: 60%; border-color: #444;" />
+
+  <h2>Download the GODCOIN Project</h2>
+  <p>You can download the full GODCOIN private sale project files below:</p>
+  <a href="downloads/godcoin-private-sale.zip" class="download-btn" style="display: inline-block; margin-top: 12px; background-color: #00cc66; color: white; padding: 12px 24px; border-radius: 6px; font-weight: bold; text-decoration: none;">
+    Download GODCOIN Project (ZIP)
+  </a>
+</section>
+    <section class="newsfeed">
+      <h2>Latest News</h2>
+      <a class="twitter-timeline" data-theme="dark" data-height="400" href="https://twitter.com/GODCOINOfiicial?ref_src=twsrc%5Etfw">Tweets by GODCOINOfiicial</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </section>
+<div class="language-switcher" style="text-align: center; margin: 30px 0;">
+  <label for="languageSelect" style="font-weight: bold;">Choose Language:</label>
+  <select id="languageSelect" onchange="changeLanguage()" style="padding: 8px 16px; border-radius: 8px; font-size: 16px;">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="pt">Português</option>
+  </select>
+</div>
+  </main>
+
+  <footer class="footer" style="padding: 40px; text-align: center;">
+    <h3>Join the GODCOIN Community</h3>
+    <p>Stay connected and help us build a faith-powered future.</p>
+    <div class="social-icons" style="margin: 20px 0;">
+      <a href="https://t.me/GODCOINOfficial" target="_blank" style="margin: 0 10px;">Telegram</a>
+      <a href="https://discord.gg/GODCOIN" target="_blank" style="margin: 0 10px;">Discord</a>
+      <a href="https://twitter.com/GODCOINOfiicial" target="_blank" style="margin: 0 10px;">X (Twitter)</a>
+    </div>
+    <p>Contact: <a href="mailto:godcoinofficial@gmail.com">godcoinofficial@gmail.com</a></p>
+    <p>© 2025 GODCOIN. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function connectPhantomMobile() {
+      const appUrl = encodeURIComponent(window.location.href);
+      const phantomDeepLink = `https://phantom.app/ul/v1/connect?app_url=${appUrl}&redirect_link=${appUrl}`;
+      
+      if (window.solana && window.solana.isPhantom) {
+        window.solana.connect()
+          .then(resp => {
+            alert(`Connected: ${resp.publicKey.toString()}`);
+          })
+          .catch(err => {
+            console.error(err);
+            alert('Connection failed. Redirecting to Phantom...');
+            window.location.href = phantomDeepLink;
+          });
+      } else {
+        window.location.href = phantomDeepLink;
+      }
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('Service worker registered.'))
+        .catch(err => console.error('Service worker registration failed:', err));
+    }
+
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+  </script>
+<script>
+function changeLanguage() {
+  const lang = document.getElementById("languageSelect").value;
+  alert(`Language switched to: ${lang}\n(Note: full translation will be added soon!)`);
+}
+</script>
+</body>
+</html>
