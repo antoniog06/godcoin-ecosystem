@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GODCOINConnect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background-color: #1a1a1a;
+        }
+        input, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>GODCOINConnect Dashboard</h1>
+
+<div class="section">
+    <h2>1. GODCOIN Price Feed</h2>
+    <iframe src="https://www.geckoterminal.com/solana/pools?embed=1"></iframe>
+</div>
+
+<div class="section">
+    <h2>2. Wallet Balance Checker</h2>
+    <input type="text" id="walletAddress" placeholder="Enter your Solana wallet address">
+    <button onclick="checkBalance()">Check GODCOIN Balance</button>
+    <p id="balanceResult">Balance will appear here...</p>
+</div>
+
+<div class="section">
+    <h2>3. Send GODCOIN (Simulated UI)</h2>
+    <input type="text" placeholder="Recipient Wallet Address">
+    <input type="number" placeholder="Amount of GODCOIN">
+    <button>Send (Simulation)</button>
+</div>
+
+<div class="section">
+    <h2>4. Private Sale Request</h2>
+    <form>
+        <input type="email" placeholder="Your Email">
+        <input type="number" placeholder="Amount of GODCOIN you wish to buy">
+        <textarea placeholder="Additional notes..."></textarea>
+        <button type="submit">Submit Request</button>
+    </form>
+</div>
+
+<div class="section">
+    <h2>5. Buy GODCOIN (Jupiter Swap)</h2>
+    <iframe src="https://jup.ag/swap/USDC-GODCOIN"></iframe>
+</div>
+
+<div class="section">
+    <h2>6. GODCOIN News (Twitter Feed)</h2>
+    <a class="twitter-timeline" data-height="600" href="https://twitter.com/GODCOINOfiicial?ref_src=twsrc%5Etfw">Tweets by GODCOINOfiicial</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<script>
+    async function checkBalance() {
+        const address = document.getElementById("walletAddress").value;
+        const result = document.getElementById("balanceResult");
+        if (!address) {
+            result.innerText = "Please enter a wallet address.";
+            return;
+        }
+        try {
+            const res = await fetch(`https://public-api.solscan.io/account/tokens?account=${address}`);
+            const data = await res.json();
+            const token = data.find(t => t.tokenAddress === "HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfUYabCcm");
+            result.innerText = token ? `GODCOIN Balance: ${token.tokenAmount.uiAmount}` : "No GODCOIN found.";
+        } catch (e) {
+            result.innerText = "Failed to fetch balance. Try again.";
+        }
+    }
+</script>
+
+</body>
+</html>
