@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# PRIVATE SALE SCRIPT FOR GODCOIN
+
+# Set the GODCOIN mint address
+TOKEN_MINT="HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm"
+
+# Ask for the recipient's wallet address
+read -p "Enter the recipient's wallet address: " RECIPIENT
+
+# Ask how many GODCOIN to transfer
+read -p "Enter the amount of GODCOIN to transfer (whole number, e.g. 1000000): " AMOUNT
+
+# Convert to raw amount (9 decimals)
+RAW_AMOUNT=$(($AMOUNT * 1000000000))
+
+# Mint the tokens to your own wallet first
+echo "Minting $AMOUNT GODCOIN to your wallet..."
+spl-token mint $TOKEN_MINT $RAW_AMOUNT
+
+# Transfer to the recipient
+echo "Transferring $AMOUNT GODCOIN to $RECIPIENT..."
+spl-token transfer $TOKEN_MINT $RAW_AMOUNT $RECIPIENT --fund-recipient
+
+echo "✅ Done: Private sale of $AMOUNT GODCOIN to $RECIPIENT"
