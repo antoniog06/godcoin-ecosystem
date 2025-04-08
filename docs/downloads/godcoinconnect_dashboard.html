@@ -87,22 +87,36 @@
 </div>
 
 <script>
-    async function checkBalance() {
-        const address = document.getElementById("walletAddress").value;
-        const result = document.getElementById("balanceResult");
-        if (!address) {
-            result.innerText = "Please enter a wallet address.";
-            return;
-        }
-        try {
-            const res = await fetch(`https://public-api.solscan.io/account/tokens?account=${address}`);
-            const data = await res.json();
-            const token = data.find(t => t.tokenAddress === "HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfUYabCcm");
-            result.innerText = token ? `GODCOIN Balance: ${token.tokenAmount.uiAmount}` : "No GODCOIN found.";
-        } catch (e) {
-            result.innerText = "Failed to fetch balance. Try again.";
-        }
+  // Connect to Solana Mainnet
+  const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl("mainnet-beta"));
+  const TOKEN_MINT = new solanaWeb3.PublicKey("HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm");
+
+  async function checkGodcoinBalance() {
+    const walletInput = document.getElementById("walletAddress");
+    const walletAddress = walletInput.value.trim();
+    const result = document.getElementById("balanceResult");
+
+    if (!walletAddress) {
+      result.innerText = "Please enter a wallet address.";
+      return;
     }
+
+    try {
+      const tokenAccounts = await connection.getParsedTokenAccountsByOwner(
+        new solanaWeb3.PublicKey(walletAddress),
+        { mint: TOKEN_MINT }
+      );
+
+      const amount = tokenAccounts.value.length
+        ? tokenAccounts.value[0].account.data.parsed.info.tokenAmount.uiAmount
+        : 0;
+
+      result.innerText = `${amount.toLocaleString()} GODCOIN`;
+    } catch (error) {
+      console.error(error);
+      result.innerText = "Failed to fetch balance. Try again.";
+    }
+  }
 </script>
 
 </body>
