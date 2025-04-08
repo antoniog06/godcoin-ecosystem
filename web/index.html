@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.min.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="GODCOIN: The faith-based utility token built on Solana. Connect your wallet, track prices, and stay updated." />
@@ -104,7 +106,15 @@
   <p>Send a small amount of <strong>SOL</strong> to your wallet address to cover trading fees.</p>
 
   <h3>3. Swap for GODCOIN</h3>
-  <p>Use the Buy button above or visit <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">Birdeye</a>.</p>
+<p>Use the Buy button above or visit <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">Birdeye</a>.</p>
+
+<!-- GODCOIN Balance Checker -->
+<div style="margin-top: 20px;">
+  <h3>4. Check Your GODCOIN Balance</h3>
+  <input type="text" id="walletInput" placeholder="Enter your Solana wallet address" style="padding: 10px; width: 300px; border-radius: 5px;" />
+  <button onclick="checkGodcoinBalance()" style="padding: 10px 20px; background-color: black; color: white; border-radius: 5px;">Check GODCOIN Balance</button>
+  <p id="walletBalance" style="margin-top: 10px; font-weight: bold;">Balance will appear here...</p>
+</div>
 
   <hr style="margin: 40px auto; width: 60%; border-color: #444;" />
 
