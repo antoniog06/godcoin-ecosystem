@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="GODCOIN: The faith-based utility token built on Solana. Connect your wallet, track prices, and stay updated." />
@@ -25,9 +26,6 @@
 </head>
 <body>
   <header>
-
-<h1 style="color: lime;">TESTING SYNC - THIS SHOULD SHOW UP</h1>
-<p style="text-align: center; color: lime;">Synced from web to docs at [insert today's date here]</p>
     <h1>Welcome to GODCOIN</h1>
     <p>The Faith-Based Utility Token Built on Solana</p>
   </header>
@@ -96,7 +94,7 @@
 <section class="how-to-trade" style="padding: 40px; text-align: center;">
   <h2>How to Trade GODCOIN</h2>
   <p>Follow these steps to get started trading GODCOIN on Solana:</p>
-
+  
   <h3>1. Install a Solana Wallet</h3>
   <p>We recommend using <strong>Phantom Wallet</strong>:</p>
   <a href="https://phantom.app/download" target="_blank" style="display: inline-block; margin: 10px 0; background: black; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none;">
@@ -107,17 +105,24 @@
   <p>Send a small amount of <strong>SOL</strong> to your wallet address to cover trading fees.</p>
 
   <h3>3. Swap for GODCOIN</h3>
-  <p>Use the Buy button above or visit <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">Birdeye</a>.</p>
+<p>Use the Buy button above or visit <a href="https://birdeye.so/token/HDaxFGHaJJi6mCMBVeZj8mwfiFpwE8snv6uEfuYabCcm?chain=solana" target="_blank">Birdeye</a>.</p>
+
+<!-- GODCOIN Balance Checker -->
+<div style="margin-top: 20px;">
+  <h3>4. Check Your GODCOIN Balance</h3>
+  <input type="text" id="walletInput" placeholder="Enter your Solana wallet address" style="padding: 10px; width: 300px; border-radius: 5px;" />
+  <button onclick="checkGodcoinBalance()" style="padding: 10px 20px; background-color: black; color: white; border-radius: 5px;">Check GODCOIN Balance</button>
+  <p id="walletBalance" style="margin-top: 10px; font-weight: bold;">Balance will appear here...</p>
+</div>
 
   <hr style="margin: 40px auto; width: 60%; border-color: #444;" />
 
   <h2>Download the GODCOIN Project</h2>
-  <p>You can download the full GODCOIN project files below:</p>
-  <a href="downloads/godcoin-private-sale.zip" class="download-btn" style="display: inline-block; margin-top: 12px; background-color: #00cc66; color: white; padding: 12px 24px; border-radius: 6px; font-weight: bold; text-decoration: none;">
-    Download GODCOIN Project (ZIP)
-  </a>
+  <p>You can download the full GODCOIN private sale project files below:</p>
+  <a href="downloads/godcoinconnect_dashboard.html" target="_blank" class="download-btn" style="display: inline-block; margin-top: 12px; background-color: #00cc66; color: white; padding: 12px 24px; border-radius: 6px; font-weight: bold; text-decoration: none;">
+  Open GODCOIN Dashboard (form)
+</a>
 </section>
-
     <section class="newsfeed">
       <h2>Latest News</h2>
       <a class="twitter-timeline" data-theme="dark" data-height="400" href="https://twitter.com/GODCOINOfiicial?ref_src=twsrc%5Etfw">Tweets by GODCOINOfiicial</a>
@@ -184,5 +189,7 @@ function changeLanguage() {
   alert(`Language switched to: ${lang}\n(Note: full translation will be added soon!)`);
 }
 </script>
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.min.js"></script>
 </body>
 </html>
